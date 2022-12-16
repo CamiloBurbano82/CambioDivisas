@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #232374;
+}
+
+.titulo {
+    text-align: center;
+    color: white;
+    font-size: 34px;
+    font-weight: bold;
+    margin: 15px;
+    padding: 15px;
+}
+
+.pagConvertir *,
+.pagHoy *,
+.pagHistorico * {
+    margin: 15px;
+    padding: 5px;
+    background-color: white;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.conversion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#btnConvertir {
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+#btnBuscar {
+    cursor: pointer;
+}
+
+#pagHoy {
+    display: flex;
+    justify-content: center;
+}
+
+#tabla {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead th {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.5));
+}
+
+tbody tr {
+    border-bottom: solid rgb(226, 195, 195);
+}
+
+@media screen and (max-width:767px) {
+
+    .pagConvertir *,
+    .pagHoy *,
+    .pagHistorico * {
+        font-size: 15px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    #grafica {
+        width: 250px;
+        height: 200px;
+    }
+
+    .modConvertir {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: auto;
+    }
+
+    #pagHistorico {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: auto;
+    }
+}
+
+@media screen and (min-width:767px) and (max-width:1023px) {
+
+    .modConvertir {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: auto;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .modConvertir {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: auto;
+    }
+}

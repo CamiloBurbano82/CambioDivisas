@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambio de Divisas</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.js"></script>
+</head>
+
+<body>
+
+    <h1 class="titulo">Cambio de Divisas</h1>
+
+    <div class="pagConvertir">
+        <div class="modConvertir">
+            <div class="conversion">
+                <p class="espacio">Cantidad</p>
+                <input type="number" id="cantidadUno" class="espacio">
+                <input type="number" id="cantidadDos" class="espacio" readonly="readonly">
+            </div>
+            <div class="conversion">
+                <p class="espacio">de:</p>
+                <select id="monedaUno" class="espacio"></select>
+            </div>
+            <div class="conversion">
+                <p class="espacio">a:</p>
+                <select id="monedaDos" class="espacio"></select>
+            </div>
+            <div class="conversion">
+                <button id="btnConvertir">Convertir</button>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="pagHoy">
+        <div class="modHoy">
+            <div id="pagHoy">
+                <table id="tabla">
+                    <thead></thead>
+                    <tbody></tbody>
+                    <tfoot></tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="pagHistorico">
+        <div>
+            <div id="pagHistorico">
+                <p>Comparar dos monedas en el tiempo <em>referencia USD</em> </p>
+                <input type="date" id="fechaInicial">
+                <input type="date" id="fechaFinal">
+                <select id="monedaUnoGraficar"></select>
+                <select id="monedaDosGraficar"></select>
+                <button id="btnBuscar">Buscar</button>
+            </div>
+            <div>
+                <canvas id="grafica" width="500" height="400"></canvas>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
